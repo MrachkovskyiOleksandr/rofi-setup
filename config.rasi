@@ -1,0 +1,11 @@
+/* --- Global Configuration --- */
+configuration {
+  modi:                       "drun,run,window";
+  show-icons:                 true;
+  display-drun:               "APPS";
+  sidebar-mode:               true;
+}
+
+/* These paths point to the SYMLINKS, not the actual theme files */
+@import "colors.rasi"        
+@import "theme.rasi"
