@@ -13,7 +13,7 @@ case "$options" in
   "Waybar") "$HOME/.config/rofi/menus/waybar/waybar.sh" ;;
   "Hyprland") codium "$HOME/.config/hypr/hyprland.conf" ;;
   "Hypridle") codium "$HOME/.config/hypr/hypridle.conf" ;;
-  "Hyprlock") codium "$HOME/.config/hypr/hyprlock.conf" ;;
+  "Hyprlock") "$HOME/.config/rofi/menus/hyprlock/hyprlock.sh" ;;
   "Rofi") codium "$HOME/.config/rofi" ;;
   "OhMyZsh") codium "$HOME/.zshrc" ;;
 esac
