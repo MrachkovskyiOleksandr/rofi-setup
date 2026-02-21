@@ -1,7 +1,10 @@
 #!/bin/bash
 
 style="
-  inputbar { enabled: false;}
+  inputbar {
+    enabled: false;
+    children: ["prompt"];
+  }
   element-icon { enabled: false;} 
 "
 

@@ -6,7 +6,10 @@ style="
   window {
     width: 1128px;
   }
-  inputbar { enabled: false;}
+  inputbar {
+    enabled: false;
+    children: ["prompt"];
+  }
   listview {
     fixed-columns: true;
     scrollbar: true;

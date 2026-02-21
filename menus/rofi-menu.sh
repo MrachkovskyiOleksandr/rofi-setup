@@ -2,7 +2,10 @@
 HOME="/home/mrak"
 
 style="
-  inputbar { enabled: false;}
+  inputbar {
+    enabled: false;
+    children: ["prompt"];
+  }
   element-icon { enabled: false;}
 "
 
