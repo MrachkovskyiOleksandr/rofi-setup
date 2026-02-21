@@ -35,6 +35,8 @@ configuration {
     alternate-urgent-foreground: var(background);
     alternate-active-background: var(active);
     alternate-active-foreground: var(background);
+
+    font:                        "AdwaitaMono Nerd Font 13";
 }
 
 /*****----- Main Window -----*****/
@@ -44,7 +46,7 @@ window {
     location:                    north;
     anchor:                      north;
     fullscreen:                  false;
-    width:                       600px;
+    width:                       420px;
     x-offset:                    0px;
     y-offset:                    300px;
 
@@ -73,9 +75,9 @@ mainbox {
     enabled:                     true;
     spacing:                     0px;
     margin:                      0px;
-    padding:                     20px;
-    border:                      0px solid;
-    border-radius:               0px 0px 0px 0px;
+    padding:                     1px;
+    border:                      1px solid;
+    border-radius:               10px;
     border-color:                @border-colour;
     background-color:            transparent;
     children:                    [ "inputbar", "message", "mode-switcher", "listview" ];
@@ -86,8 +88,7 @@ inputbar {
     enabled:                     true;
     spacing:                     10px;
     padding:                     5px 10px;
-    border:                      0px solid;
-    border-radius:               10px;
+    border-radius:               10px 10px 0 0 ;
     border-color:                @border-colour;
     background-color:            @alternate-background;
     text-color:                  @foreground-colour;
@@ -156,12 +157,10 @@ listview {
     require-input:               false;
     
     spacing:                     5px;
-    margin:                      10px 0 0 0;
+    margin:                      0;
     padding:                     10px;
-    border:                      2px;
-    /* border:                      0px 2px 2px 2px ; */
+    border:                      0px;
     border-radius:               10px;
-    /* border-radius:               0px 0px 10px 10px; */
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;

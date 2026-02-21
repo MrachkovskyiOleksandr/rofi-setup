@@ -6,9 +6,9 @@ style="
   element-icon { enabled: false;}
 "
 
-options=$(printf "Colors\nThemes" | rofi -dmenu w)
+options=$(printf "󰏘 | Colors\n | Themes" | rofi -dmenu -theme-str "$style" )
 
 case "$options" in
-  "Colors") "$HOME/.config/rofi/change-colors.sh" ;;
-  "Themes") "$HOME/.config/rofi/change-theme.sh" ;;
+  *"Colors"*) "$HOME/.config/rofi/change-colors.sh" ;;
+  *"Themes"*) "$HOME/.config/rofi/change-theme.sh" ;;
 esac

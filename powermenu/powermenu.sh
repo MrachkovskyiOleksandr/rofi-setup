@@ -62,7 +62,7 @@ run_cmd() {
 	selected="$(confirm_exit)"
 	if [[ "$selected" == "$yes" ]]; then
 		if [[ $1 == '--lock' ]]; then
-			hyprlock -c ~/.config/hypr/hyprlock/hyprlock.conf
+			hyprlock -c ~/.config/hypr/hyprlock.conf
 		elif [[ $1 == '--shutdown' ]]; then
 			systemctl shutdown
 		elif [[ $1 == '--reboot' ]]; then

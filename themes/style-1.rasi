@@ -35,6 +35,8 @@ configuration {
     alternate-urgent-foreground: var(background);
     alternate-active-background: var(active);
     alternate-active-foreground: var(background);
+
+    font:                        "AdwaitaMono Nerd Font 13";
 }
 
 /*****----- Main Window -----*****/
