@@ -13,7 +13,7 @@ style="
 options=$(printf "Themes\nColors\nConfig" | rofi -dmenu -p "Waybar" -theme-str "$style")
 
 case "$options" in
-  "Themes") "$HOME/.config/rofi/menus/waybar/waybar-theme-switcher.sh" ;;
-  "Colors") "$HOME/.config/rofi/menus/waybar/waybar-color-switcher.sh" ;;
+  "Themes") "$HOME/.config/rofi/menus/status-bar/waybar/waybar-theme-switcher.sh" ;;
+  "Colors") "$HOME/.config/rofi/menus/status-bar/waybar/waybar-color-switcher.sh" ;;
   "Config") codium "$HOME/.config/waybar/config.jsonc" ;;
 esac
