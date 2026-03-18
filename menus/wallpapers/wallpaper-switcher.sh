@@ -34,5 +34,5 @@ options=$(
 if [ -n "$options" ]; then
     target=$(find "$WALLPAPERS_DIR" -name "$options" | head -n 1)
 
-    matugen image $target --contrast 0.1
+    matugen image $target --contrast 0.1 --source-color-index 0
 fi
