@@ -16,12 +16,12 @@ kill() {
 }
 
 defaultStatusBar(){
-  echo $1 > $STATUS_BAR/default_status_bar
+  echo "$1" > $STATUS_BAR/status-bar.conf
 }
 
 options=$(printf "Waybar\nAGS Bar" | rofi -dmenu -p "Status Bar" -theme-str "$style")
 
 case "$options" in
-  *"Waybar"*) kill; waybar & disown; defaultStatusBar "waybar" ;;
-  *"AGS"*) kill; ags run & disown; defaultStatusBar "ags run" ;;
+  *"Waybar"*) kill; waybar & disown; defaultStatusBar "exec-once = waybar" ;;
+  *"AGS"*) kill; ags run & disown; defaultStatusBar "exec-once = ags run" ;;
 esac
