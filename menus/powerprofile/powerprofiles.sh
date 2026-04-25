@@ -25,13 +25,16 @@ list="󰌪 | Power saver\n󰾅 | Balanced\n | Performance\n󰂄 | Battery lim
 
 options=$(printf "$list" | rofi -dmenu -p "Power profile" -mesg "$message" -theme-str "$style")
 
-notification() {
-  notify-send "Power profile" "Power profile is set to: $1"
+send_notification() {
+  notify-send "" \
+              "$1" \
+              -h string:category:"system" \
+              -i "power-profile-$2"
 }
 
 case "$options" in
-  *"saver") powerprofilesctl set power-saver | notification "Power saver" ;;
-  *"Balanced") powerprofilesctl set balanced | notification "Balanced" ;;
-  *"Performance") powerprofilesctl set performance | notification "Performance" ;;
+  *"saver") powerprofilesctl set power-saver | send_notification "Power saver" "power-saver";;
+  *"Balanced") powerprofilesctl set balanced | send_notification "Balanced" "balanced";;
+  *"Performance") powerprofilesctl set performance | send_notification "Performance" "performance";;
   *"limit") "$HOME/.config/rofi/menus/powerprofile/battery-limit.sh" ;;
 esac

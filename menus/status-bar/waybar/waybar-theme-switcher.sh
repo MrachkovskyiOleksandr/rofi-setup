@@ -21,4 +21,4 @@ ln -sf "$THEMES_DIR/$option/style.css" "$LINK_TARGET/style.css"
 
 .config/waybar/scripts/launch.sh
 
-notify-send "Waybar Theme" "Theme switched to $option"
+notify-send "Waybar" "Theme switched to $option"

@@ -26,18 +26,18 @@ case $exit_code in
         if file --mime-type "$PREVIEW_FILE" | grep -q "image/"; then
             swayimg "$PREVIEW_FILE" &
         else
-            notify-send "Clipboard" "Not an image!" -t 1000
+            notify-send "Clipboard" "Not an image!"
         fi
         ;;
     11)
         echo "$selection" | cliphist delete
-        notify-send "Clipboard" "Deleted entry." -t 800
+        notify-send "Clipboard" "Deleted entry."
         ;;
     12)
         confirm=$(echo -e "No\nYes" | rofi -dmenu -p "Wipe all history?" -theme-str 'window {width: 200px;}')
         if [ "$confirm" == "Yes" ]; then
             cliphist wipe
-            notify-send "Clipboard" "History Wiped." -t 1000
+            notify-send "Clipboard" "History Wiped."
         fi
         ;;
 esac

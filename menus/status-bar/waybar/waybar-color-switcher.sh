@@ -20,4 +20,4 @@ ln -sf "$COLORS_DIR/$option.css" "$LINK_TARGET"
 
 .config/waybar/scripts/launch.sh
 
-notify-send "Waybar Theme" "Color switched to $option"
+notify-send "Waybar" "Color switched to $option"

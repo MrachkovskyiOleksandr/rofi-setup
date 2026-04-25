@@ -64,7 +64,7 @@ run_cmd() {
 		if [[ $1 == '--lock' ]]; then
 			hyprlock -c ~/.config/hypr/hyprlock.conf
 		elif [[ $1 == '--shutdown' ]]; then
-			systemctl shutdown
+			systemctl poweroff
 		elif [[ $1 == '--reboot' ]]; then
 			systemctl reboot
 		fi

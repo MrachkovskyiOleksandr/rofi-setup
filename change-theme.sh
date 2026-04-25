@@ -15,4 +15,4 @@ fi
 
 ln -sf "$THEME_DIR/$option.rasi" "$LINK_TARGET"
 
-notify-send "Rofi Theme" "Theme switched to $option"
+notify-send "Rofi" "Theme switched to $option"

@@ -21,4 +21,4 @@ case $option in
 esac
 
 
-notify-send "Rofi Theme" "Colors switched to $option"
+notify-send "Rofi" "Colors switched to $option"
